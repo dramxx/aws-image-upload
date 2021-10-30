@@ -24,9 +24,9 @@ public class FileStore {
 
         ObjectMetadata metaData = new ObjectMetadata();
 
-        optionalMetaData.ifPresent(map -> {
-            if(!map.isEmpty()){
-                map.forEach(metaData::addUserMetadata);
+        optionalMetaData.ifPresent(data -> {
+            if(!data.isEmpty()){
+                data.forEach(metaData::addUserMetadata);
             }
         });
 
