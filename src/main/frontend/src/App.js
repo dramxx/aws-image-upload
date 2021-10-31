@@ -10,8 +10,8 @@ function App() {
 
   useEffect(() => {
     axios.get(`${SERVER_URI}${USER_PROFILE_URI}`)
-        .then(response => setUserProfiles(response.data))
-        .catch(error => console.log(error))
+      .then(response => setUserProfiles(response.data))
+      .catch(error => console.log(error))
   }, [])
 
   return (
